@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>音乐播放器</title>
+    <link rel="stylesheet" href="./css/audio.css" />
+</head>
+
+<body background="./img/bg0.png">
+    <!-- 上半部分 -->
+    <div class="upper-container">
+        <!-- 唱片 -->
+        <div class="record-container">
+            <div class="record-bg">
+                <div class="record-img rotate-play"></div>
+            </div>
+        </div>
+        <!-- 右边的歌曲名 -->
+        <div class="introduction-container">
+            <div class="music-title">洛神赋</div>
+            <div class="author-container">
+                作者：
+                <span class="author-name">陈冠锋</span>
+            </div>
+        </div>
+    </div>
+    <!-- 下半部分 -->
+    <div class="bottom-container">
+        <audio id="audioTag"></audio>
+        <!-- 进度条 -->
+        <div class="progress"></div>
+        <!-- 控件部分 -->
+        <div class="controls">
+            <!-- 左 -->
+            <div class="left">
+                <span class="played-time">00:00</span>
+                &nbsp;/&nbsp;
+                <span class="audio-time">00:00</span>
+            </div>
+            <!-- 中 -->
+            <div class="center">
+                <div id="playMode" class="center-icon"></div>
+                <div id="before-music" class="center-icon"></div>
+                <div id="playPause" class="center-icon"></div>
+                <div id="last-music" class="center-icon"></div>
+                <div id="volumn" class="center-icon"></div>
+                <!-- 音量进度条 -->
+                <input type="range" id="volumn-togger" value="70" min="0" max="100" step="1" />
+            </div>
+            <!-- 右 -->
+            <div class="right">
+                <!-- MV -->
+                <div id="MV" class="bottom-icon"></div>
+                <!-- 倍速 -->
+                <div id="speed">1.0X</div>
+                <!-- 列表 -->
+                <div id="list" class="bottom-icon"></div>
+            </div>
+        </div>
+    </div>
+    <!-- 列表 -->
+    <div class="music-container">
+        <div class="musicList-title"></div>
+        <hr />
+        <div class="musiclists">
+            <div class="music0"></div>
+            <div class="music1"></div>
+            <div class="music2"></div>
+        </div>
+    </div>
+</body>
+<script src="./js/audio.js"></script>
+
+</html>
